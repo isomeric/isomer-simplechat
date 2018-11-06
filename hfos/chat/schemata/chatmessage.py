@@ -33,8 +33,8 @@ ChatMessage: ChatMessage to store messages in rooms and private chats
 
 """
 
-from hfos.schemata.defaultform import defaultform
-from hfos.schemata.base import base_object, uuid_object
+from isomer.schemata.defaultform import defaultform
+from isomer.schemata.base import base_object, uuid_object
 
 ChatMessageSchema = base_object('chatmessage', all_roles='crew')
 

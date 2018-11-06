@@ -32,11 +32,11 @@ Chat manager
 """
 
 
-from hfos.component import ConfigurableComponent, handler
-from hfos.logger import error, warn, hilight, debug, verbose
-from hfos.events.client import broadcast, send
+from isomer.component import ConfigurableComponent, handler
+from isomer.logger import error, warn, hilight, debug, verbose
+from isomer.events.client import broadcast, send
 
-from hfos.chat.host import say
+from isomer.chat.host import say
 
 
 class Bot(ConfigurableComponent):
@@ -56,7 +56,7 @@ class Bot(ConfigurableComponent):
             'default': 'Hal'
         }
     }
-    channel = "hfosweb"
+    channel = 'isomer-web'
 
     def __init__(self, *args):
         super(Bot, self).__init__("CHATBOT", *args)

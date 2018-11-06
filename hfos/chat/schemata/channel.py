@@ -33,8 +33,8 @@ ChatChannel: Definitions of chat rooms
 
 """
 
-from hfos.schemata.defaultform import editbuttons
-from hfos.schemata.base import base_object, uuid_object
+from isomer.schemata.defaultform import editbuttons
+from isomer.schemata.base import base_object, uuid_object
 
 ChannelSchema = base_object('chatchannel', all_roles='crew')
 

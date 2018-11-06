@@ -33,8 +33,8 @@ ChatLastlog: Lastlog to store lastlogs for users
 
 """
 
-from hfos.schemata.defaultform import noform
-from hfos.schemata.base import base_object
+from isomer.schemata.defaultform import noform
+from isomer.schemata.base import base_object
 
 ChatLastlogSchema = base_object('chatlastlog', has_owner=True,
                                 all_roles='owner')
