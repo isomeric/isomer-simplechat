@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# HFOS - Hackerfleet Operating System
-# ===================================
+# Isomer Application Framework
+# ============================
 # Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -225,7 +225,7 @@ class Host(ConfigurableComponent):
                      pretty=True, lvl=debug)
 
             packet = {
-                'component': 'hfos.chat.host',
+                'component': 'isomer.chat.host',
                 'action': 'status',
                 'data': {
                     'joined': joined,
@@ -281,7 +281,7 @@ class Host(ConfigurableComponent):
                     self.chat_channels[channel_uuid].users.append(user_uuid)
                     self.chat_channels[channel_uuid].save()
                     packet = {
-                        'component': 'hfos.chat.host',
+                        'component': 'isomer.chat.host',
                         'action': 'join',
                         'data': channel_uuid
                     }
@@ -335,7 +335,7 @@ class Host(ConfigurableComponent):
             return
 
         history_packet = {
-            'component': 'hfos.chat.host',
+            'component': 'isomer.chat.host',
             'action': 'history',
             'data': {
                 'channel': channel,
@@ -368,7 +368,7 @@ class Host(ConfigurableComponent):
             message.save()
 
             chat_packet = {
-                'component': 'hfos.chat.host',
+                'component': 'isomer.chat.host',
                 'action': 'say',
                 'data': message.serializablefields()
             }

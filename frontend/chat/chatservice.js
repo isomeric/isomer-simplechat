@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc service
- * @name hfosFrontendApp.chatservice
+ * @name isomerFrontendApp.chatservice
  * @description
  * # chatservice
- * Service in the hfosFrontendApp.
+ * Service in the isomerFrontendApp.
  */
 
 class chatservice {
@@ -59,7 +59,7 @@ class chatservice {
             }
         };
 
-        socket.listen('hfos.chat.host', function (msg) {
+        socket.listen('isomer.chat.host', function (msg) {
             if (msg.action === 'say') {
                 console.log('[CHAT] Incoming chat data: ', msg);
                 let chat_message = msg.data;
@@ -204,7 +204,7 @@ class chatservice {
 
     join(channel) {
         console.log('[CHAT] Joining channel ', channel);
-        this.socket.send({component: 'hfos.chat.host', action: 'join', data: channel});
+        this.socket.send({component: 'isomer.chat.host', action: 'join', data: channel});
     }
 
     get_history() {
@@ -218,7 +218,7 @@ class chatservice {
 
         console.log('[CHAT] Earliest timestamp is:', timestamp);
         let packet = {
-            component: 'hfos.chat.host',
+            component: 'isomer.chat.host',
             action: 'history',
             data: {
                 end: timestamp,
@@ -254,7 +254,7 @@ class chatservice {
         this.set_last_channel(channel);
 
         let packet = {
-            component: 'hfos.chat.host',
+            component: 'isomer.chat.host',
             action: 'change',
             data: channel
         };
@@ -274,7 +274,7 @@ class chatservice {
     send(msg) {
         console.log('Transmitting chat message:', msg);
         let packet = {
-            component: 'hfos.chat.host',
+            component: 'isomer.chat.host',
             action: 'say',
             data: {
                 recipient: this.channel,

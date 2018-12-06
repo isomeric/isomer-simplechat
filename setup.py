@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# HFOS - Hackerfleet Operating System
-# ===================================
+# Isomer Application Framework
+# ============================
 # Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -24,30 +24,30 @@ __license__ = "AGPLv3"
 from setuptools import setup, find_packages
 
 setup(
-    name="hfos-chat",
+    name="isomer-chat",
     version="0.0.2",
-    description="hfos-chat",
+    description="isomer-chat",
 
-    author="Hackerfleet Community",
+    author="Isomer Community",
     author_email="riot@c-base.org",
-    url="https://github.com/hackerfleet/hfos-chat",
+    url="https://github.com/isomeric/isomer-chat",
     license="GNU Affero General Public License v3",
     packages=find_packages(),
-    long_description="""HFOS - Chat
-===========
+    long_description="""Isomer - Chat
+=============
 
 A chat system.
 
-This software package is a plugin module for HFOS.
+This software package is a plugin module for Isomer.
 """,
     dependency_links=[],
-    install_requires=['hfos>=1.2.0'],
+    install_requires=['isomer>=1.0.0'],
     entry_points="""[isomer.components]
-    chat=hfos.chat.host:Host
+    chat=isomer.chat.host:Host
 [isomer.schemata]
-    chatmessage=hfos.chat.schemata.chatmessage:ChatMessage
-    chatchannel=hfos.chat.schemata.channel:ChatChannel
-    chatlastlog=hfos.chat.schemata.lastlog:ChatLastlog
+    chatmessage=isomer.chat.schemata.chatmessage:ChatMessage
+    chatchannel=isomer.chat.schemata.channel:ChatChannel
+    chatlastlog=isomer.chat.schemata.lastlog:ChatLastlog
     """,
     test_suite="tests.main.main",
 )

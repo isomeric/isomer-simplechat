@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name hfosFrontendApp.controller:ChatCtrl
+ * @name isomerFrontendApp.controller:ChatCtrl
  * @description
  * # ChatCtrl
- * Controller of the hfosFrontendApp
+ * Controller of the isomerFrontendApp
  */
 
 import sidebar from './chatsidebar.tpl.html';
