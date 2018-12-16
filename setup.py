@@ -36,7 +36,7 @@ setup(
     long_description="""Isomer - Chat
 =============
 
-A chat system.
+Simple chat system.
 
 This software package is a plugin module for Isomer.
 """,
