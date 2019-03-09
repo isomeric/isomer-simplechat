@@ -3,7 +3,7 @@
 
 # Isomer Application Framework
 # ============================
-# Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
+# Copyright (C) 2011-2019 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -39,13 +39,17 @@ from isomer.schemata.base import base_object, uuid_object
 ChatMessageSchema = base_object('chatmessage', all_roles='crew')
 
 ChatMessageSchema['properties'].update({
-    'timestamp': {'type': 'number', 'title': 'Timestamp',
-                  'format': 'datetimepicker',
-                  'description': 'Message timestamp'},
+    'timestamp': {
+        'type': 'string', 'title': 'Timestamp',
+        'format': 'datetimepicker',
+        'description': 'Message timestamp'
+    },
     'recipient': uuid_object('Unique User ID of recipient'),
     'sender': uuid_object('Unique User ID of sender'),
-    'content': {'type': 'string', 'minLength': 1, 'title': 'Name',
-                'description': 'Chat Message name'}
+    'content': {
+        'type': 'string', 'minLength': 1, 'title': 'Name',
+        'description': 'Chat Message name'
+    }
 })
 
 ChatMessage = {'schema': ChatMessageSchema, 'form': defaultform}

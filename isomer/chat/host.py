@@ -3,7 +3,7 @@
 
 # Isomer Application Framework
 # ============================
-# Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
+# Copyright (C) 2011-2019 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -117,7 +117,7 @@ class Host(ConfigurableComponent):
 
     @handler("cli_user_list")
     def cli_user_list(self, *args):
-        #self.log('Logged in users:', self.users, pretty=True)
+        # self.log('Logged in users:', self.users, pretty=True)
         Row = namedtuple("User", ['Name', 'Attention'])
         rows = []
         for user in self.users.values():
@@ -145,7 +145,7 @@ class Host(ConfigurableComponent):
 
     def objectcreation(self, event):
         pass
-        #self.log('Creation event!')
+        # self.log('Creation event!')
 
     @handler('clientdisconnect')
     def clientdisconnect(self, event):

@@ -3,7 +3,7 @@
 
 # Isomer Application Framework
 # ============================
-# Copyright (C) 2011-2018 Heiko 'riot' Weinen <riot@c-base.org> and others.
+# Copyright (C) 2011-2019 Heiko 'riot' Weinen <riot@c-base.org> and others.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as published by
@@ -30,7 +30,6 @@ Chat manager
 
 
 """
-
 
 from isomer.component import ConfigurableComponent, handler
 from isomer.logger import error, warn, hilight, debug, verbose
