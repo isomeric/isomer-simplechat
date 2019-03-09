@@ -3,7 +3,7 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 
-import { routing } from './chat.config.js';
+import {routing} from './chat.config.js';
 
 import './chat/chat.scss';
 
@@ -19,5 +19,6 @@ export default angular
     .service('chatservice', chatserviceclass)
     .component('chat', {controller: chatcomponent, template: template})
     .directive('chatbutton', chatbutton)
-    .run(function (chatservice) {})
+    .run(function (chatservice) {
+    })
     .name;

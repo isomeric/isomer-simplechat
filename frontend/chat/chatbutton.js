@@ -33,12 +33,12 @@ let chatbutton = function () {
         restrict: 'E',
         scope: {},
         template: chatbuttontemplate,
-        controller: function($scope, chatservice, $state) {
+        controller: function ($scope, chatservice, $state) {
             console.log('[CHATBUTTON] I am alive!');
             $scope.chat = chatservice;
-            
+
             console.log('[CHATBUTTON] Service:', chatservice);
-            $scope.toggle_chat = function() {
+            $scope.toggle_chat = function () {
                 console.log('[CHATBUTTON] Switching to chat channel:');
                 $state.go('app.chat', {});
 
